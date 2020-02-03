@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="pressure">Pressure(Pa)</string>
+    <string name="humidity">Humidity(%)</string>
+    <string name="wind_speed">Wind speed(Km/h)</string>
+    <string name="enter_the_city">Enter the city</string>
+    <string name="something">something</string>
+</resources>

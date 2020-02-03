@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.michailpiskunov.myapplication.viewmodel.ItemWeekViewModel" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/three_days_forecast_cv_fwd"
+        style="@style/Widget.MaterialComponents.CardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_dimension_8dp"
+        app:cardCornerRadius="@dimen/default_dimension_8dp"
+        app:cardElevation="@dimen/default_dimension_8dp">
+
+        <LinearLayout
+            android:id="@+id/container_three_days_forecast_cv_fwd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/day_one_three_days_forecast_cv_fwd"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/name_day_one_three_days_forecast_cv_fwd"
+                    style="@style/TextView.Primary.Header"
+                    android:text="@{viewModel.date}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    tools:text="Tomorrow" />
+
+                <ImageView
+                    android:id="@+id/icon_day_one_three_days_forecast_cv_fwd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_weather_storm"
+                    tools:src="@drawable/ic_weather_storm" />
+
+                <LinearLayout
+                    android:id="@+id/temp_container_day_one_three_days_forecast_cv_fwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/day_temp_day_one_three_days_forecast_cv_fwd"
+                        style="@style/TextView.Primary.Header"
+                        android:text="@{viewModel.maxTemp}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/default_dimension_8dp"
+                        tools:text="+8" />
+
+                    <TextView
+                        android:id="@+id/night_temp_day_one_three_days_forecast_cv_fwd"
+                        style="@style/TextView.Secondary"
+                        android:text="@{viewModel.minTemp}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/default_dimension_8dp"
+                        tools:text="+3" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>
